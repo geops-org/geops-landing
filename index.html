@@ -1,604 +1,591 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GeoPs conecta negocios locales con consumidores cercanos mediante geolocalización inteligente y notificaciones en tiempo real. Descubre promociones exclusivas y gestiona campañas de marketing digital.">
-    <meta name="keywords" content="publicidad hiperlocal, marketing geolocalizado, negocios locales, digitalización PYME, marketing de proximidad, ofertas en tiempo real, cupones, descuentos">
-    <meta name="author" content="GeoPs Labs">
-    <title>GeoPs - Tu plataforma de descuentos y ofertas geolocalizadas</title>
-    <link rel="stylesheet" href="public/css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeoPS — Tu radar hiperlocal del ecosistema asiático en Lima</title>
+<meta name="description" content="GeoPS conecta consumidores y comercios del ecosistema asiático en Lima, Perú. Descubre, compara y encuentra lo que buscas en San Borja, Lince y el Barrio Chino.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="public/css/styles.css">
+
+<style>
+  /* sr-only utility */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+  }
+</style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <img src="public/images/logo.png" alt="GeoPs" class="logo-img">
-                </div>
-                
-                <!-- Mobile Menu Toggle -->
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="close-icon">&#10006;</span>
-                </button>
-                
-                <!-- Desktop Navigation -->
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
-                        <li><a href="#marcas" data-i18n="nav_marcas">Marcas</a></li>
-                        <li><a href="#conoce-mas" data-i18n="nav_conoce_mas">Conoce más</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="header-actions">
-                    <!-- Language Switcher -->
-                    <div class="language-switcher">
-                        <button id="lang-en" class="lang-btn active">EN</button>
-                        <button id="lang-es" class="lang-btn">ES</button>
-                    </div>
-                    <a href="https://geops-frontend.vercel.app/login" class="login-btn" data-i18n="btn_login">Iniciar Sesión</a>
-                </div>
-                
-                <!-- Mobile Menu Dropdown -->
-                <div class="mobile-menu">
-                    <nav class="mobile-nav">
-                        <ul>
-                            <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
-                            <li><a href="#marcas" data-i18n="nav_marcas">Marcas</a></li>
-                            <li><a href="#conoce-mas" data-i18n="nav_conoce_mas">Conoce más</a></li>
-                        </ul>
-                    </nav>
-                    <div class="mobile-actions">
-                        <!-- Language Switcher Mobile -->
-                        <div class="language-switcher">
-                            <button id="lang-en-mobile" class="lang-btn active">EN</button>
-                            <button id="lang-es-mobile" class="lang-btn">ES</button>
-                        </div>
-                        <div class="mobile-search">
-                            <input type="text" placeholder="Buscar..." data-i18n="search_placeholder">
-                            <button type="submit">
-                                <img src="public/images/search.png" alt="Search" class="search-icon">
-                            </button>
-                        </div>
-                        <a href="https://geops-frontend.vercel.app/login" class="mobile-login-btn" data-i18n="btn_login">Iniciar Sesión</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="container">
-            <div class="hero-grid">
-                <!-- Left Column -->
-                <div class="hero-left">
-                    <!-- Ver Ofertas Card (Top) -->
-                    <div class="hero-card offers-card">
-                        <div class="card-background">
-                            <div class="card-content">
-                                <a href="https://geops-frontend.vercel.app/login" class="btn-secondary" data-i18n="hero_ver_ofertas">Ver ofertas</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Diversión Card (Bottom) -->
-                    <div class="hero-card diversion-card">
-                        <div class="card-background">
-                            <div class="card-content">
-                                <h2 data-i18n="hero_diversion">DIVIÉRTETE CON MENOS DE S/29.90</h2>
-                                <a href="https://geops-frontend.vercel.app/login" class="btn-secondary" data-i18n="hero_mas_info">Más información ↗</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Column - Main Carousel -->
-                <div class="hero-carousel">
-                    <div class="carousel-container">
-                        <div class="carousel-slide active">
-                            <img src="public/images/carrousel-1.jpg" alt="Hello Kitty">
-                            <div class="carousel-overlay">
-                                <div class="experience-badge" data-i18n="hero_experiencia">EXPERIENCIA INMERSIVA</div>
-                                <h2>Hello Kitty And Friends<br>- Jockey Plaza</h2>
-                                <div class="price">S/40</div>
-                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="public/images/juego.jpg" alt="Carousel image 1">
-                            <div class="carousel-overlay">
-                                <h2 data-i18n="carousel_promo_especial">Promoción Especial</h2>
-                                <div class="price">S/35</div>
-                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="public/images/coney-park.jpg" alt="Coney Park">
-                            <div class="carousel-overlay">
-                                <h2>Coney Park</h2>
-                                <div class="price">S/45</div>
-                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="public/images/cinemark.jpg" alt="Cinemark">
-                            <div class="carousel-overlay">
-                                <h2>Cinemark</h2>
-                                <div class="price">S/25</div>
-                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="public/images/diversion.jpg" alt="Diversión">
-                            <div class="carousel-overlay">
-                                <h2 data-i18n="carousel_diversion_garantizada">Diversión Garantizada</h2>
-                                <div class="price">S/30</div>
-                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-indicators">
-                        <span class="indicator active" onclick="goToSlide(0)"></span>
-                        <span class="indicator" onclick="goToSlide(1)"></span>
-                        <span class="indicator" onclick="goToSlide(2)"></span>
-                        <span class="indicator" onclick="goToSlide(3)"></span>
-                        <span class="indicator" onclick="goToSlide(4)"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ════════════════════════════════════════
+     1. HEADER
+════════════════════════════════════════ -->
+<header id="site-header" role="banner">
+  <div class="header-inner">
 
-    <!-- Promotions Bar -->
-    <section class="promotions-bar">
-        <div class="promo-scroll-container">
-            <div class="promo-scroll-content">
-                <span class="promo-item" data-i18n="promo_ubicacion">📍 Promociones exclusivas según tu ubicación 📍</span>
-                <span class="promo-item" data-i18n="promo_salud">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
-                <span class="promo-item" data-i18n="promo_ubicacion">📍 Promociones exclusivas según tu ubicación 📍</span>
-                <span class="promo-item" data-i18n="promo_salud">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
-                <span class="promo-item" data-i18n="promo_ubicacion">📍 Promociones exclusivas según tu ubicación 📍</span>
-                <span class="promo-item" data-i18n="promo_salud">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
-            </div>
-        </div>
-    </section>
+    <!-- Logo -->
+    <a href="#hero" class="logo-link" aria-label="GeoPS — Inicio">
+      <img src="public/images/GeoPS-Logo.png" alt="GeoPS logo" width="36" height="36" loading="lazy">
+      <span class="logo-wordmark">GeoPS</span>
+    </a>
 
-    <!-- Category Cards Section -->
-    <section class="category-section">
-        <div class="container">
-            <div class="category-grid">
-                <div class="category-card">
-                    <div class="category-content">
-                        <h3 data-i18n="category_locales">Ofertas para disfrutar en tus locales favoritos</h3>
-                    </div>
-                    <img src="public/images/tienda-shopping.jpg" alt="Locales favoritos" class="category-image">
-                </div>
-                <div class="category-card">
-                    <div class="category-content">
-                        <h3 data-i18n="category_cine">Promociones en cine, conciertos y diversión</h3>
-                    </div>
-                    <img src="public/images/cineplanet.jpg" alt="Cine y diversión" class="category-image">
-                </div>
-                <div class="category-card">
-                    <div class="category-content">
-                        <h3 data-i18n="category_boticas">Beneficios en boticas, clínicas y cuidado personal</h3>
-                    </div>
-                    <img src="public/images/madam-tusan.jpg" alt="Cuidado personal" class="category-image">
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Desktop nav -->
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="#hero"         class="nav-link" data-section="hero"         data-i18n="nav_inicio">Inicio</a>
+      <a href="#como-funciona" class="nav-link" data-section="como-funciona" data-i18n="nav_marcas">Marcas</a>
+      <a href="#conoce-geops" class="nav-link" data-section="conoce-geops" data-i18n="nav_conoce_mas">Conoce más</a>
+    </nav>
 
-    <!-- Brands Section -->
-    <section class="brands-section" id="marcas">
-        <div class="container">
-            <h2 data-i18n="brands_title">Marcas que <em>confían</em> en GeoPs</h2>
-            <div class="brands-grid">
-                <div class="brand-card">
-                    <div class="brand-logo">
-                        <img src="public/images/c-logo.png" alt="C" class="brand-image">
-                    </div>
-                    <div class="brand-info">
-                        <div class="discount">6%</div>
-                        <div class="brand-text" data-i18n="brands_descuento">descuento exclusivo GeoPs</div>
-                    </div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-logo">
-                        <img src="public/images/coney-park-logo.png" alt="Coney Park" class="brand-image">
-                    </div>
-                    <div class="brand-info">
-                        <div class="discount">6%</div>
-                        <div class="brand-text" data-i18n="brands_promociones">en promociones Coney Park</div>
-                    </div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-logo">
-                        <img src="public/images/farenet-logo.png" alt="Farenet" class="brand-image">
-                    </div>
-                    <div class="brand-info">
-                        <div class="discount">4%</div>
-                        <div class="brand-text" data-i18n="brands_oferta">en oferta hoy</div>
-                    </div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-logo">
-                        <img src="public/images/pet-center-logo.png" alt="Pet Center" class="brand-image">
-                    </div>
-                    <div class="brand-info">
-                        <div class="discount">8%</div>
-                        <div class="brand-text" data-i18n="brands_premium">con tu plan Premium</div>
-                    </div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-logo">
-                        <img src="public/images/bembos-logo.png" alt="Bembos" class="brand-image">
-                    </div>
-                    <div class="brand-info">
-                        <div class="discount">5%</div>
-                        <div class="brand-text" data-i18n="brands_compras">en compras seleccionadas</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Hamburger (mobile) -->
+    <button
+      id="hamburger-btn"
+      class="hamburger-btn"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="msr" aria-hidden="true">menu</span>
+    </button>
 
-    <!-- About Section -->
-    <section class="about-section" id="conoce-mas">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="placeholder-pattern"></div>
-                </div>
-                <div class="about-text">
-                    <h2 data-i18n="about_title">¿Quiénes somos?</h2>
-                    <p data-i18n="about_text">Geo Publicity Service (GeoPs) es una plataforma creada por estudiantes de Ingeniería de Software en Perú. Conectamos consumidores con negocios locales mediante geolocalización y notificaciones inteligentes, brindando ofertas de valor y beneficios exclusivos.</p>
-                    <button class="btn-primary" data-i18n="about_btn">Conoce Más</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Header actions -->
+    <div class="header-actions">
+      <button class="lang-btn" id="lang-toggle" aria-label="Cambiar idioma a English">
+        <span class="msr" aria-hidden="true">language</span>
+        <span id="lang-label">ES</span>
+      </button>
+      <a href="#" class="btn-filled" role="button">
+        <span class="msr" aria-hidden="true">person</span>
+        <span data-i18n="login_btn">Iniciar sesión</span>
+      </a>
+    </div>
 
-    <!-- Plans Section -->
-    <section class="plans-section">
-        <div class="container">
-            <h2 data-i18n="plans_title">Elige tu plan ideal</h2>
-            <p class="plans-subtitle" data-i18n="plans_subtitle">GeoPs tiene beneficios tanto para clientes como para negocios.</p>
-            <div class="plans-grid">
-                <div class="plan-card">
-                    <h3 data-i18n="plan_gratuito">Plan Gratuito</h3>
-                    <div class="price">$$</div>
-                    <div class="plan-section">
-                        <h4 data-i18n="plan_clientes">🔸 Para Clientes</h4>
-                        <ul class="features-list">
-                            <li data-i18n="plan_free_c1">• Acceso a promociones cercanas según ubicación.</li>
-                            <li data-i18n="plan_free_c2">• Notificaciones básicas de ofertas.</li>
-                            <li data-i18n="plan_free_c3">• Beneficios generales de negocios aliados.</li>
-                            <li data-i18n="plan_free_c4">• Acceso desde un dispositivo.</li>
-                        </ul>
-                    </div>
-                    <div class="plan-section">
-                        <h4 data-i18n="plan_proveedores">🔸 Para Proveedores</h4>
-                        <ul class="features-list">
-                            <li data-i18n="plan_free_p1">• Publicar promociones básicas.</li>
-                            <li data-i18n="plan_free_p2">• Llegar a clientes cercanos según ubicación.</li>
-                            <li data-i18n="plan_free_p3">• Perfil de negocio en la plataforma.</li>
-                        </ul>
-                    </div>
-                    <a href="https://geops-frontend.vercel.app/login" class="btn-outline" data-i18n="plan_btn_free">Empieza gratis</a>
-                </div>
-                <div class="plan-card featured">
-                    <h3 data-i18n="plan_premium">Plan Premium</h3>
-                    <div class="price">$$</div>
-                    <div class="plan-section">
-                        <h4 data-i18n="plan_clientes">🔸 Para Clientes</h4>
-                        <ul class="features-list">
-                            <li data-i18n="plan_premium_c1">• Todo lo del plan gratuito.</li>
-                            <li data-i18n="plan_premium_c2">• Acceso a <span class="highlight">más descuentos exclusivos</span>.</li>
-                            <li data-i18n="plan_premium_c3">• Promociones especiales solo para usuarios Premium.</li>
-                            <li data-i18n="plan_premium_c4">• Prioridad en notificaciones de ofertas.</li>
-                            <li data-i18n="plan_premium_c5">• Beneficios adicionales en eventos o experiencias.</li>
-                        </ul>
-                    </div>
-                    <div class="plan-section">
-                        <h4 data-i18n="plan_proveedores">🔸 Para Proveedores</h4>
-                        <ul class="features-list">
-                            <li data-i18n="plan_premium_p1">• Todo lo del plan gratuito.</li>
-                            <li data-i18n="plan_premium_p2">• Acceso a <span class="highlight">estadísticas de marketing</span> (alcance, clics, interacción).</li>
-                            <li data-i18n="plan_premium_p3">• Reportes descargables en PDF/Excel.</li>
-                            <li data-i18n="plan_premium_p4">• Mayor visibilidad en listados de negocios.</li>
-                            <li data-i18n="plan_premium_p5">• Segmentación avanzada de clientes.</li>
-                            <li data-i18n="plan_premium_p6">• Soporte prioritario.</li>
-                        </ul>
-                    </div>
-                    <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="plan_btn_premium">Hazte Premium</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  </div>
 
-    <!-- Carousel Sections -->
-    <section class="carousel-section">
-        <div class="container">
-            <h2 data-i18n="carousel_sabores">Sabores con descuento</h2>
-            <div class="horizontal-carousel">
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/playa.jpg" alt="Rosa Náutica">
-                    </div>
-                    <h3>ROSA NÁUTICA</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/madam-tusan.jpg" alt="Madam Tusan">
-                    </div>
-                    <h3>MADAM TUSAN</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/siete-sopas.jpg" alt="7 Sopas">
-                    </div>
-                    <h3>7 SOPAS</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/la-bisteka-1.jpg" alt="La Bisteka">
-                    </div>
-                    <h3>LA BISTEKA</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/playa.jpg" alt="Rosa Náutica">
-                    </div>
-                    <h3>ROSA NÁUTICA</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/madam-tusan.jpg" alt="Madam Tusan">
-                    </div>
-                    <h3>MADAM TUSAN</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/siete-sopas.jpg" alt="7 Sopas">
-                    </div>
-                    <h3>7 SOPAS</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/la-bisteka-1.jpg" alt="La Bistecca">
-                    </div>
-                    <h3>LA BISTECCA</h3>
-                </div>
-            </div>
-            
-            <div class="horizontal-carousel-indicators">
-                <!-- Indicators will be generated dynamically by JavaScript -->
-            </div>
-        </div>
-    </section>
+  <!-- Mobile menu dropdown -->
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Menú móvil">
+    <a href="#hero"          class="nav-link" data-i18n="nav_inicio">Inicio</a>
+    <a href="#como-funciona" class="nav-link" data-i18n="nav_marcas">Marcas</a>
+    <a href="#conoce-geops"  class="nav-link" data-i18n="nav_conoce_mas">Conoce más</a>
+  </nav>
+</header>
 
-    <section class="carousel-section">
-        <div class="container">
-            <h2 data-i18n="carousel_diversion">Diversión asegurada</h2>
-            <div class="horizontal-carousel">
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/juego.jpg" alt="Paintball Asia">
-                    </div>
-                    <h3>PAINTBALL - ASIA</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/cineplanet.jpg" alt="Cineplanet Prime">
-                    </div>
-                    <h3>CINEPLANET PRIME - SM</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/karts.jpg" alt="Formula Kart">
-                    </div>
-                    <h3>FORMULA KART - JP, ASI</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/happyland.jpg" alt="Happyland">
-                    </div>
-                    <h3>HAPPYLAND</h3>
-                </div>
-            </div>
-            <div class="horizontal-carousel-indicators">
-                <!-- Indicators will be generated dynamically by JavaScript -->
-            </div>
-        </div>
-    </section>
+<main>
 
-    <section class="carousel-section">
-        <div class="container">
-            <h2 data-i18n="carousel_salud">Cuida tu salud con beneficios</h2>
-            <div class="horizontal-carousel">
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/aruma.jpg" alt="Aruma">
-                    </div>
-                    <h3>ARUMA</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/organa.jpg" alt="Organa">
-                    </div>
-                    <h3>ORGANA</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/army.png" alt="Army Gym">
-                    </div>
-                    <h3>ARMY GYM</h3>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-image">
-                        <img src="public/images/smart.jpeg" alt="Smart fit">
-                    </div>
-                    <h3>SMART GYM</h3>
-                </div>
-            </div>
-            <div class="horizontal-carousel-indicators">
-                <!-- Indicators will be generated dynamically by JavaScript -->
-            </div>
-        </div>
-    </section>
+<!-- ════════════════════════════════════════
+     2. HERO
+════════════════════════════════════════ -->
+<section id="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <div class="cta-left">
-                    <div class="cta-icon">
-                        <img src="public/images/stars.png" alt="Stars" class="star-icon">
-                    </div>
-                    <div class="cta-text">
-                        <h2 data-i18n="cta_title">Haz que más clientes descubran tu negocio</h2>
-                        <p data-i18n="cta_text">Promociona tus productos y llega a consumidores cercanos con GeoPs.</p>
-                    </div>
-                </div>
-                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="cta_btn">Soy negocio, quiero unirme</a>
-            </div>
-        </div>
-    </section>
+    <!-- Left: text -->
+    <div class="hero-text">
+      <div class="hero-badge reveal">
+        <span class="msr" aria-hidden="true">location_on</span>
+        <span data-i18n="hero_badge">Lima, Perú · Ecosistema asiático</span>
+      </div>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 data-i18n="faq_title">Resolvemos tus dudas</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span data-i18n="faq_q1">¿Quiénes pueden usar GeoPs?</span>
-                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a1">GeoPs está diseñado para consumidores que buscan descuentos y ofertas cerca de su ubicación, así como para negocios y comerciantes que desean promocionar sus productos y servicios a clientes locales.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span data-i18n="faq_q2">¿Qué beneficios tengo como cliente?</span>
-                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a2">Como cliente de GeoPs, puedes acceder a descuentos exclusivos en restaurantes, entretenimiento, salud y bienestar. Recibirás notificaciones de ofertas cercanas a tu ubicación y podrás disfrutar de promociones especiales con nuestro Plan Premium.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span data-i18n="faq_q3">¿Qué beneficios tengo como proveedor?</span>
-                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a3">Como proveedor, puedes aumentar la visibilidad de tu negocio, llegar a clientes potenciales cercanos mediante geolocalización, acceder a estadísticas de marketing detalladas y obtener reportes descargables para optimizar tus estrategias promocionales.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span data-i18n="faq_q4">¿GeoPs es gratis?</span>
-                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a4">Sí, GeoPs ofrece un plan gratuito tanto para clientes como para proveedores. Sin embargo, también contamos con un Plan Premium que incluye beneficios adicionales como descuentos exclusivos, estadísticas avanzadas y soporte prioritario.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span data-i18n="faq_q5">¿Cómo funciona la geolocalización?</span>
-                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a5">GeoPs utiliza tu ubicación actual para mostrarte ofertas y descuentos de negocios cercanos. Solo necesitas permitir el acceso a la ubicación en tu dispositivo para recibir notificaciones personalizadas de promociones en tu área.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span data-i18n="faq_q6">¿Cómo me registro como negocio?</span>
-                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a6">Puedes registrar tu negocio fácilmente haciendo clic en "Soy negocio, quiero unirme", completando el formulario con la información de tu empresa y comenzando a publicar promociones de inmediato.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <h1 id="hero-heading" class="reveal reveal-delay-1">
+        Tu <span class="accent">radar hiperlocal</span> del ecosistema asiático en Lima
+      </h1>
 
-    <!-- Know More Section -->
-    <section class="know-more-section">
-        <div class="container">
-            <h2 data-i18n="know_more_title">Conoce más</h2>
-            <div class="know-more-grid">
-                <div class="know-more-card">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NhQioYMtlVI?start=13" title="Sobre el equipo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <div class="card-overlay">
-                            <h3 data-i18n="know_more_team">Sobre el equipo</h3>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <p data-i18n="know_more_team_desc">Startup creada por estudiantes de Ingeniería de Software en Perú.</p>
-                    </div>
-                </div>
-                <div class="know-more-card">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/e8-8cvBD7Xs" title="Sobre el producto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <div class="card-overlay">
-                            <h3 data-i18n="know_more_product">Sobre el producto</h3>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <p data-i18n="know_more_product_desc">GeoPs conecta negocios y clientes con promociones inteligentes.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <p class="hero-sub reveal reveal-delay-2" data-i18n="hero_sub">
+        Conecta con comercios especializados en San Borja, Lince y el Barrio Chino. Inventario real, precios transparentes y navegación exacta.
+      </p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <img src="public/images/logo.png" alt="GeoPs" class="footer-logo-img">
-                        
-                    </div>
-                    <div class="footer-text">
-                        <p class="footer-tagline" data-i18n="footer_tagline">Promociones cerca de ti.</p>
-                    </div>
-                    <p class="footer-copyright" data-i18n="footer_copyright">© 2025 Todos los derechos reservados</p>
-                </div>
-                <div class="footer-right">
-                                        <div class="footer-social">
-                        <a href="#" aria-label="Instagram">
-                            <img src="public/images/icon-instagram.png" alt="Instagram" class="social-icon">
-                        </a>
-                        <a href="#" aria-label="LinkedIn">
-                            <img src="public/images/icon-linkedin.png" alt="LinkedIn" class="social-icon">
-                        </a>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#" data-i18n="footer_nosotros">Nosotros</a>
-                        <a href="#" data-i18n="footer_servicios">Servicios</a>
-                        <a href="#" data-i18n="footer_contacto">Contacto</a>
-                        <a href="TERMS_AND_CONDITIONS.pdf" target="_blank" data-i18n="footer_terminos">Términos y Condiciones</a>   
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+      <div class="hero-cta reveal reveal-delay-3">
+        <a href="#" class="fab" role="button">
+          <span class="msr" aria-hidden="true">rocket_launch</span>
+          <span data-i18n="hero_cta">Crear cuenta gratis</span>
+        </a>
+        <a href="#como-funciona" class="btn-text">
+          <span data-i18n="hero_cta_secondary">Conoce GeoPS ↓</span>
+        </a>
+      </div>
 
-    <script src="public/js/i18n.js"></script>
-    <script src="public/js/script.js"></script>
+      <div class="hero-trust reveal reveal-delay-3">
+        <div class="hero-trust-dots" aria-hidden="true">
+          <div class="hero-trust-dot">L</div>
+          <div class="hero-trust-dot">M</div>
+          <div class="hero-trust-dot">K</div>
+          <div class="hero-trust-dot">+</div>
+        </div>
+        <span data-i18n="hero_trust">Comercios verificados en Lima</span>
+      </div>
+    </div>
+
+    <!-- Right: carousel -->
+    <div
+      class="hero-carousel reveal reveal-delay-2"
+      role="region"
+      aria-label="Zonas de GeoPS"
+      aria-roledescription="carrusel"
+      tabindex="0"
+    >
+      <div class="carousel-track" aria-live="polite">
+
+        <div class="carousel-slide carousel-slide-1" role="group" aria-label="Diapositiva 1 de 3">
+          <div class="slide-emoji" aria-hidden="true">🌸</div>
+          <div class="slide-zone" data-i18n="slide1_zone">San Borja</div>
+          <div class="slide-cat"  data-i18n="slide1_cat">K-Beauty / Av. Aviación</div>
+        </div>
+
+        <div class="carousel-slide carousel-slide-2" role="group" aria-label="Diapositiva 2 de 3">
+          <div class="slide-emoji" aria-hidden="true">🎌</div>
+          <div class="slide-zone" data-i18n="slide2_zone">Lince</div>
+          <div class="slide-cat"  data-i18n="slide2_cat">Anime &amp; Manga / C.C. Arenales</div>
+        </div>
+
+        <div class="carousel-slide carousel-slide-3" role="group" aria-label="Diapositiva 3 de 3">
+          <div class="slide-emoji" aria-hidden="true">🥢</div>
+          <div class="slide-zone" data-i18n="slide3_zone">Barrio Chino</div>
+          <div class="slide-cat"  data-i18n="slide3_cat">Gastronomía / Calle Capón</div>
+        </div>
+
+      </div>
+
+      <!-- Arrows -->
+      <button class="carousel-arrow prev" aria-label="Anterior" data-i18n-aria="carousel_prev">
+        <span class="msr" aria-hidden="true">chevron_left</span>
+      </button>
+      <button class="carousel-arrow next" aria-label="Siguiente" data-i18n-aria="carousel_next">
+        <span class="msr" aria-hidden="true">chevron_right</span>
+      </button>
+
+      <!-- Dots -->
+      <div class="carousel-dots" role="tablist" aria-label="Seleccionar diapositiva">
+        <button class="carousel-dot" role="tab" aria-label="Diapositiva 1" aria-selected="true"></button>
+        <button class="carousel-dot" role="tab" aria-label="Diapositiva 2" aria-selected="false"></button>
+        <button class="carousel-dot" role="tab" aria-label="Diapositiva 3" aria-selected="false"></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     3. CÓMO FUNCIONA + MARCAS
+════════════════════════════════════════ -->
+<section id="como-funciona" aria-labelledby="how-heading">
+  <div class="container">
+
+    <!-- Block 1: steps -->
+    <div class="how-header reveal">
+      <div class="section-label">
+        <span class="msr" aria-hidden="true">auto_fix_high</span>
+        <span data-i18n="nav_conoce_mas">Conoce más</span>
+      </div>
+      <h2 id="how-heading" class="section-title" data-i18n="how_title">¿Cómo funciona GeoPS?</h2>
+    </div>
+
+    <div class="steps-grid">
+
+      <article class="step-card reveal reveal-delay-1">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;">
+          <div class="step-number" aria-hidden="true">1</div>
+          <div class="step-icon">
+            <span class="msr" aria-hidden="true">search</span>
+          </div>
+        </div>
+        <h3 class="step-title" data-i18n="step1_title">Busca tu producto</h3>
+        <p  class="step-body"  data-i18n="step1_body">Encuentra productos asiáticos por nombre, categoría o zona.</p>
+      </article>
+
+      <article class="step-card reveal reveal-delay-2">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;">
+          <div class="step-number" aria-hidden="true">2</div>
+          <div class="step-icon">
+            <span class="msr" aria-hidden="true">location_on</span>
+          </div>
+        </div>
+        <h3 class="step-title" data-i18n="step2_title">Localiza el comercio</h3>
+        <p  class="step-body"  data-i18n="step2_body">Consulta la dirección exacta, piso y stand del comercio más cercano.</p>
+      </article>
+
+      <article class="step-card reveal reveal-delay-3">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;">
+          <div class="step-number" aria-hidden="true">3</div>
+          <div class="step-icon">
+            <span class="msr" aria-hidden="true">directions_walk</span>
+          </div>
+        </div>
+        <h3 class="step-title" data-i18n="step3_title">Ve directo</h3>
+        <p  class="step-body"  data-i18n="step3_body">Sin viajes infructuosos. Inventario verificado antes de salir.</p>
+      </article>
+
+    </div>
+
+    <!-- Divider -->
+    <hr class="brands-divider reveal" aria-hidden="true">
+
+    <!-- Block 2: marquee -->
+    <p class="brands-subtitle reveal" data-i18n="brands_subtitle">
+      Comercios verificados en la plataforma
+    </p>
+
+    <div class="marquee-wrap reveal reveal-delay-1" aria-label="Marcas verificadas en GeoPS" role="marquee">
+      <div class="marquee-track">
+        <!-- Original set -->
+        <div class="brand-logo" aria-label="Market Capón">Market Capón</div>
+        <div class="brand-logo" aria-label="Conamu">Conamu</div>
+        <div class="brand-logo" aria-label="Factory Comics">Factory Comics</div>
+        <div class="brand-logo" aria-label="Kumi Korean">Kumi Korean</div>
+        <div class="brand-logo" aria-label="Hong Kong Mkt">Hong Kong Mkt</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="brand-logo" aria-hidden="true">Market Capón</div>
+        <div class="brand-logo" aria-hidden="true">Conamu</div>
+        <div class="brand-logo" aria-hidden="true">Factory Comics</div>
+        <div class="brand-logo" aria-hidden="true">Kumi Korean</div>
+        <div class="brand-logo" aria-hidden="true">Hong Kong Mkt</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     4. SEGMENTACIÓN B2C / B2B
+════════════════════════════════════════ -->
+<section id="segments" aria-labelledby="segments-heading">
+  <div class="segments-inner">
+
+    <div class="segments-header reveal">
+      <div class="section-label">
+        <span class="msr" aria-hidden="true">groups</span>
+        <span data-i18n="segments_label">Para todos</span>
+      </div>
+      <h2 id="segments-heading" class="section-title" data-i18n="segments_title">Una plataforma, dos mundos</h2>
+      <p class="section-subtitle" data-i18n="segments_sub">Ya seas entusiasta del mundo asiático o dueño de un negocio, GeoPS está hecho para ti.</p>
+    </div>
+
+    <div class="reveal reveal-delay-1">
+      <div class="tabs-list" role="tablist" aria-label="Segmentos de usuario">
+        <button
+          class="tab-btn" role="tab"
+          id="tab-b2c" aria-selected="true" aria-controls="panel-b2c"
+          data-i18n="tab_b2c"
+        >Para entusiastas asiáticos</button>
+        <button
+          class="tab-btn" role="tab"
+          id="tab-b2b" aria-selected="false" aria-controls="panel-b2b"
+          data-i18n="tab_b2b"
+        >Para dueños de negocios</button>
+      </div>
+    </div>
+
+    <!-- B2C panel -->
+    <div id="panel-b2c" class="tab-panel active" role="tabpanel" aria-labelledby="tab-b2c">
+      <div class="segment-panel">
+        <ul class="segment-points">
+          <li class="segment-point">
+            <div class="segment-point-icon"><span class="msr" aria-hidden="true">search</span></div>
+            <div class="segment-point-text">
+              <strong data-i18n="b2c_p1_title">Encuentra productos únicos</strong>
+              <span data-i18n="b2c_p1_desc">Accede a miles de artículos del ecosistema asiático que no encontrarás en ningún otro lado.</span>
+            </div>
+          </li>
+          <li class="segment-point">
+            <div class="segment-point-icon"><span class="msr" aria-hidden="true">price_check</span></div>
+            <div class="segment-point-text">
+              <strong data-i18n="b2c_p2_title">Precios reales, sin sorpresas</strong>
+              <span data-i18n="b2c_p2_desc">Compara entre comercios y elige siempre la mejor opción con total transparencia.</span>
+            </div>
+          </li>
+          <li class="segment-point">
+            <div class="segment-point-icon"><span class="msr" aria-hidden="true">location_on</span></div>
+            <div class="segment-point-text">
+              <strong data-i18n="b2c_p3_title">Ubicación exacta del stand</strong>
+              <span data-i18n="b2c_p3_desc">Navega dentro de galerías con precisión. Nunca más te pierdas en Arenales o Calle Capón.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="segment-visual">
+          <div class="segment-visual-icon" aria-hidden="true">🛍️</div>
+          <div class="segment-visual-title" data-i18n="b2c_visual_title">Descubre lo mejor del sabor asiático cerca de ti</div>
+          <div class="segment-visual-sub">San Borja · Lince · Barrio Chino</div>
+          <a href="#" class="btn-filled" style="margin-top:8px;">
+            <span data-i18n="b2c_cta">Explorar ahora</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- B2B panel -->
+    <div id="panel-b2b" class="tab-panel" role="tabpanel" aria-labelledby="tab-b2b">
+      <div class="segment-panel">
+        <ul class="segment-points">
+          <li class="segment-point">
+            <div class="segment-point-icon"><span class="msr" aria-hidden="true">trending_up</span></div>
+            <div class="segment-point-text">
+              <strong data-i18n="b2b_p1_title">Aumenta tu tráfico peatonal</strong>
+              <span data-i18n="b2b_p1_desc">Aparece en los resultados de miles de usuarios que buscan activamente en tu zona.</span>
+            </div>
+          </li>
+          <li class="segment-point">
+            <div class="segment-point-icon"><span class="msr" aria-hidden="true">campaign</span></div>
+            <div class="segment-point-text">
+              <strong data-i18n="b2b_p2_title">Publica promociones en segundos</strong>
+              <span data-i18n="b2b_p2_desc">Comunica descuentos y liquidaciones directamente a usuarios interesados en tu categoría.</span>
+            </div>
+          </li>
+          <li class="segment-point">
+            <div class="segment-point-icon"><span class="msr" aria-hidden="true">groups</span></div>
+            <div class="segment-point-text">
+              <strong data-i18n="b2b_p3_title">Llega a miles de entusiastas</strong>
+              <span data-i18n="b2b_p3_desc">Tu negocio visible para la comunidad que más valora lo que ofreces.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="segment-visual" style="background:var(--md-secondary-container);">
+          <div class="segment-visual-icon" aria-hidden="true">🏪</div>
+          <div class="segment-visual-title" style="color:var(--md-on-secondary-container);" data-i18n="b2b_visual_title">Haz crecer tu negocio con GeoPS</div>
+          <div class="segment-visual-sub" style="color:var(--md-on-secondary-container);opacity:.75;">Más visibilidad · Más clientes · Más ventas</div>
+          <a href="#" class="btn-filled" style="margin-top:8px;background:var(--md-secondary);">
+            <span data-i18n="b2b_cta">Registrar mi negocio</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     5. CONOCE GEOPS — VIDEOS FUSIONADOS
+════════════════════════════════════════ -->
+<section id="conoce-geops" aria-labelledby="conoce-heading">
+  <div class="conoce-inner">
+
+    <div class="conoce-header reveal">
+      <div class="section-label">
+        <span class="msr" aria-hidden="true">play_circle</span>
+        <span data-i18n="conoce_label">La plataforma</span>
+      </div>
+      <h2 id="conoce-heading" class="section-title" data-i18n="conoce_title">Conoce GeoPS</h2>
+    </div>
+
+    <div class="videos-grid">
+
+      <!-- Video producto -->
+      <div class="video-col reveal reveal-delay-1">
+        <div class="video-col-label">
+          <span class="msr" aria-hidden="true">play_circle</span>
+          <span data-i18n="video_prod_label">La plataforma</span>
+        </div>
+        <h3 class="video-col-title" data-i18n="video_prod_title">Conoce la plataforma</h3>
+        <div class="video-frame-wrap" role="region" aria-label="Video de la plataforma GeoPS">
+          <!-- PLACEHOLDER_VIDEO_PRODUCTO -->
+          <div class="video-placeholder">
+            <button class="video-play-btn" aria-label="Reproducir video de la plataforma">
+              <span class="msrf" aria-hidden="true">play_arrow</span>
+            </button>
+            <span class="video-placeholder-label" data-i18n="video_placeholder">Video · Próximamente</span>
+          </div>
+        </div>
+        <p class="video-col-desc" data-i18n="video_prod_desc">
+          Descubre cómo miles de usuarios en Lima ya encuentran sus productos asiáticos favoritos con GeoPS.
+        </p>
+      </div>
+
+      <!-- Video equipo -->
+      <div class="video-col reveal reveal-delay-2">
+        <div class="video-col-label" style="background:var(--md-tertiary-container);color:var(--md-on-tertiary-container);">
+          <span class="msr" aria-hidden="true">groups</span>
+          <span data-i18n="video_team_label">El equipo</span>
+        </div>
+        <h3 class="video-col-title" data-i18n="video_team_title">Nuestro equipo</h3>
+        <div class="video-frame-wrap" style="background:color-mix(in srgb,var(--md-secondary) 20%,var(--md-inverse-surface));" role="region" aria-label="Video del equipo GeoPS">
+          <!-- PLACEHOLDER_VIDEO_EQUIPO -->
+          <div class="video-placeholder">
+            <button class="video-play-btn" style="background:var(--md-secondary);" aria-label="Reproducir video del equipo">
+              <span class="msrf" aria-hidden="true">play_arrow</span>
+            </button>
+            <span class="video-placeholder-label" data-i18n="video_placeholder">Video · Próximamente</span>
+          </div>
+        </div>
+        <p class="video-col-desc" data-i18n="video_team_desc">
+          Un equipo multidisciplinario unido por la misión de digitalizar el ecosistema asiático en Lima.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     6. Q&A ACCORDION
+════════════════════════════════════════ -->
+<section id="preguntas-frecuentes" aria-labelledby="qa-heading">
+  <div class="qa-inner">
+
+    <div class="qa-header reveal">
+      <div class="section-label">
+        <span class="msr" aria-hidden="true">help_outline</span>
+        <span data-i18n="qa_label">Preguntas frecuentes</span>
+      </div>
+      <h2 id="qa-heading" class="section-title" data-i18n="qa_title">¿Tienes dudas?</h2>
+    </div>
+
+    <div class="accordion reveal reveal-delay-1">
+
+      <!-- Q1 -->
+      <div class="accordion-item">
+        <button
+          class="accordion-trigger"
+          aria-expanded="false"
+          aria-controls="qa-body-1"
+          id="qa-trigger-1"
+        >
+          <span data-i18n="qa1_q">¿Quiénes pueden usar GeoPS?</span>
+          <span class="accordion-icon"><span class="msr" aria-hidden="true">expand_more</span></span>
+        </button>
+        <div class="accordion-body" id="qa-body-1" role="region" aria-labelledby="qa-trigger-1">
+          <div class="accordion-content">
+            <p data-i18n="qa1_a">GeoPS está abierto a cualquier persona interesada en el ecosistema asiático de Lima: consumidores que buscan productos específicos, entusiastas de la cultura asiática, y comerciantes que quieren digitalizar su negocio.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="accordion-item">
+        <button
+          class="accordion-trigger"
+          aria-expanded="false"
+          aria-controls="qa-body-2"
+          id="qa-trigger-2"
+        >
+          <span data-i18n="qa2_q">¿Qué beneficios tengo como cliente?</span>
+          <span class="accordion-icon"><span class="msr" aria-hidden="true">expand_more</span></span>
+        </button>
+        <div class="accordion-body" id="qa-body-2" role="region" aria-labelledby="qa-trigger-2">
+          <div class="accordion-content">
+            <p data-i18n="qa2_a">Como cliente puedes acceder a descuentos exclusivos en restaurantes, entretenimiento, salud y bienestar.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="accordion-item">
+        <button
+          class="accordion-trigger"
+          aria-expanded="false"
+          aria-controls="qa-body-3"
+          id="qa-trigger-3"
+        >
+          <span data-i18n="qa3_q">¿Qué beneficios tengo como proveedor?</span>
+          <span class="accordion-icon"><span class="msr" aria-hidden="true">expand_more</span></span>
+        </button>
+        <div class="accordion-body" id="qa-body-3" role="region" aria-labelledby="qa-trigger-3">
+          <div class="accordion-content">
+            <p data-i18n="qa3_a">Aumentas tu visibilidad ante miles de usuarios activos, publicas promociones de forma inmediata, gestionas tu inventario en línea y recibes reseñas verificadas que construyen confianza.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="accordion-item">
+        <button
+          class="accordion-trigger"
+          aria-expanded="false"
+          aria-controls="qa-body-4"
+          id="qa-trigger-4"
+        >
+          <span data-i18n="qa4_q">¿Cuánto es el costo?</span>
+          <span class="accordion-icon"><span class="msr" aria-hidden="true">expand_more</span></span>
+        </button>
+        <div class="accordion-body" id="qa-body-4" role="region" aria-labelledby="qa-trigger-4">
+          <div class="accordion-content">
+            <p data-i18n="qa4_a">Si eres consumidor, GeoPS es completamente gratis — solo crea tu cuenta y empieza a explorar. Si tienes un negocio y quieres unirte a la plataforma:</p>
+            <a href="#site-footer" class="btn-outlined" data-i18n="qa4_cta">Soy un negocio, quiero unirme</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════════════════════════════════════
+     7. FOOTER
+════════════════════════════════════════ -->
+<footer id="site-footer" role="contentinfo">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div>
+        <div class="footer-logo">
+          <img src="public/images/GeoPS-Logo.png" alt="GeoPS" width="36" height="36" loading="lazy">
+          <span>GeoPS</span>
+        </div>
+        <p class="footer-tagline" data-i18n="footer_tagline">Tu radar hiperlocal del ecosistema asiático en Lima, Perú.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="GeoPS en Instagram">
+            <span class="msr" aria-hidden="true">photo_camera</span>
+          </a>
+          <a href="#" class="footer-social" aria-label="GeoPS en Facebook">
+            <span class="msr" aria-hidden="true">thumb_up</span>
+          </a>
+          <a href="#" class="footer-social" aria-label="GeoPS en TikTok">
+            <span class="msr" aria-hidden="true">music_note</span>
+          </a>
+          <a href="#" class="footer-social" aria-label="GeoPS en LinkedIn">
+            <span class="msr" aria-hidden="true">work</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Plataforma -->
+      <div>
+        <p class="footer-col-title" data-i18n="footer_col_plat">Plataforma</p>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#como-funciona" data-i18n="footer_link_how">Cómo funciona</a></li>
+          <li class="footer-link"><a href="#como-funciona" data-i18n="footer_link_map">Quiénes somos</a></li>
+        </ul>
+      </div>
+
+      <!-- Negocios -->
+      <div>
+        <p class="footer-col-title" data-i18n="footer_col_biz">Negocios</p>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#preguntas-frecuentes" data-i18n="footer_link_register">Registrar comercio</a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa -->
+      <div>
+        <p class="footer-col-title" data-i18n="footer_col_company">Empresa</p>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#como-funciona" data-i18n="footer_link_about">Sobre GeoPS</a></li>
+          <li class="footer-link"><a href="#site-footer"  data-i18n="footer_link_contact">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider" aria-hidden="true">
+
+    <div class="footer-bottom">
+      <span data-i18n="footer_copyright">© 2026 GeoPS Inc. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="#" data-i18n="footer_terms">Términos y Condiciones de Servicio</a>
+        <a href="#" data-i18n="footer_privacy">Políticas de Privacidad</a>
+        <a href="#" data-i18n="footer_cookies">Cookies</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="public/js/i18n.js" defer></script>
+<script src="public/js/main.js" defer></script>
+
 </body>
 </html>
