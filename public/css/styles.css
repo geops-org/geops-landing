@@ -334,22 +334,43 @@ h1 .accent { color: var(--md-primary); }
   opacity: 0; transition: opacity 300ms var(--motion-std);
   border-radius: var(--radius-lg);
   padding: 32px; text-align: center;
+  color: white; 
 }
+
 .carousel-slide.active { opacity: 1; z-index: 1; }
 
-.carousel-slide-1 { background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%); }
-.carousel-slide-2 { background: linear-gradient(135deg, #BBDEFB 0%, #90CAF9 100%); }
-.carousel-slide-3 { background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%); }
+.carousel-slide-1 {
+  background: url('../images/kbeauty.jpg') center/cover no-repeat;
+}
 
+.carousel-slide-2 {
+  background: url('../images/animemanga.jpg') center/cover no-repeat;
+}
+
+.carousel-slide-3 {
+  background: url('../images/barriochino.jpg') center/cover no-repeat;
+}
+.carousel-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* oscurece imagen */
+  border-radius: inherit;
+  z-index: 0;
+}
+.carousel-slide > * {
+  position: relative;
+  z-index: 1; /* delante */
+}
 .slide-emoji { font-size: 64px; margin-bottom: 16px; line-height: 1; }
 .slide-zone {
   font-size: 28px; font-weight: 700; margin-bottom: 8px;
-  color: var(--md-inverse-surface);
+  color: white;
 }
 .slide-cat {
   font-size: 15px; font-weight: 500;
-  color: var(--md-on-surface-variant);
-  background: rgba(255,255,255,0.6);
+  color: white;
+  background: rgba(0,0,0,0.5);
   padding: 6px 16px; border-radius: var(--radius-full);
   backdrop-filter: blur(4px);
 }
