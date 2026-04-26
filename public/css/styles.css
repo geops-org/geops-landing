@@ -539,7 +539,19 @@ h1 .accent { color: var(--md-primary); }
   background: var(--md-primary-container); border-radius: 20px;
   padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;
 }
-.segment-visual-icon { font-size: 64px; }
+.segment-visual-image {
+  width: 100%;
+  height: 140px; /* ajusta */
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.segment-visual-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
 .segment-visual-title { font-size: 18px; font-weight: 700; color: var(--md-on-primary-container); text-align: center; }
 .segment-visual-sub   { font-size: 13px; color: var(--md-on-primary-container); opacity: .8; text-align: center; }
 
