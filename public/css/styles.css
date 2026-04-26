@@ -472,15 +472,31 @@ h1 .accent { color: var(--md-primary); }
 }
 
 .brand-logo {
-  width: 120px; height: 60px; flex-shrink: 0;
-  background: #F1EFE8; border-radius: var(--radius-sm);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 600; color: var(--md-on-surface-variant);
-  text-align: center; padding: 8px;
-  filter: grayscale(1); transition: filter 300ms;
+  display: flex;
+  flex-direction: column; /* 👈 clave */
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 24px;
+  text-align: center;
+  white-space: nowrap; /* importante para marquee */
+  opacity: 0.7;
+  transition: all 0.3s ease;
 }
-.brand-logo:hover { filter: grayscale(0); }
-
+.brand-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+.brand-logo span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--md-on-surface); /* o white si fondo oscuro */
+}
+.brand-logo:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
 /* ── SEGMENTS ───────────────────────────────────────────── */
 #segments { background: var(--md-surface); }
 
