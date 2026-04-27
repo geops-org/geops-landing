@@ -7,7 +7,7 @@
   "lang_toggle_label": "Switch to English",
 
   "hero_badge": "Lima, Perú · Ecosistema asiático",
-  "hero_h1": "Tu radar hiperlocal del ecosistema asiático en Lima",
+  "hero_h1": "Tu <span class=\"accent\">radar hiperlocal</span> del ecosistema asiático en Lima",
   "hero_sub": "Conecta con comercios especializados en San Borja, Lince y el Barrio Chino. Inventario real, precios transparentes y navegación exacta.",
   "hero_cta": "Crear cuenta gratis",
   "hero_cta_secondary": "Conoce GeoPS ↓",

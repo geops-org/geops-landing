@@ -25,6 +25,12 @@ function applyLang() {
 		if (i18nData[key] !== undefined) el.textContent = i18nData[key];
 	});
 
+	// HTML nodes
+	document.querySelectorAll('[data-i18n-html]').forEach(el => {
+		const key = el.dataset.i18nHtml;
+		if (i18nData[key] !== undefined) el.innerHTML = i18nData[key];
+	});
+
 	// Placeholders
 	document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
 		const key = el.dataset.i18nPlaceholder;
@@ -63,7 +69,7 @@ const FALLBACK = {
 		nav_inicio: "Inicio", nav_marcas: "Marcas", nav_conoce_mas: "Conoce más",
 		login_btn: "Iniciar sesión", lang_toggle_label: "Switch to English",
 		hero_badge: "Lima, Perú · Ecosistema asiático",
-		hero_h1: "Tu radar hiperlocal del ecosistema asiático en Lima",
+		hero_h1: "Tu <span class=\"accent\">radar hiperlocal</span> del ecosistema asiático en Lima",
 		hero_sub: "Conecta con comercios especializados en San Borja, Lince y el Barrio Chino.",
 		hero_cta: "Crear cuenta gratis", hero_cta_secondary: "Conoce GeoPS ↓",
 		hero_trust: "Comercios verificados en Lima",
@@ -119,7 +125,7 @@ const FALLBACK = {
 		nav_inicio: "Home", nav_marcas: "Brands", nav_conoce_mas: "Learn more",
 		login_btn: "Sign in", lang_toggle_label: "Cambiar a Español",
 		hero_badge: "Lima, Peru · Asian ecosystem",
-		hero_h1: "Your hyperlocal radar for Lima's Asian ecosystem",
+		hero_h1: "Your <span class=\"accent\">hyperlocal radar</span> for Lima's Asian ecosystem",
 		hero_sub: "Connect with specialized stores in San Borja, Lince and Lima's Chinatown.",
 		hero_cta: "Create free account", hero_cta_secondary: "Discover GeoPS ↓",
 		hero_trust: "Verified stores in Lima",
